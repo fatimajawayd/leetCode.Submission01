@@ -85,6 +85,7 @@ int* transformArray(int* nums, int numsSize, int* returnSize){
             result[i] = 1;
         }
     }
+//sorting
     int index=0;
     for(int i=0; i<count; i++){
         result[index] = 0;
