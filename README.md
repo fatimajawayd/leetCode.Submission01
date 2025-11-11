@@ -31,6 +31,41 @@ int main(void){
 }
 ```
 
+## PROBELM: 04
+### SHUFFLE AN ARRAY
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+int* suffle(int* nums, int numsSize, int n, int* returnSize){
+    int* results = (int*) malloc(numsSize*sizeof(int));
+    int k = 0;
+    for(int i=0; i<n; i++){
+        results[k] = nums[i];
+        k++;
+        results[k] = nums[i+n];
+        k++;
+    }
+    return results;
+}
+
+int main(){
+    int nums[] = {1, 2, 3, 4, 5, 6};
+    int returnSize;
+    int numsSize = sizeof(nums)/sizeof(nums[0]);
+
+    int* results = suffle(nums, 6, 3, &returnSize);
+
+    for(int i=0; i<numsSize; i++){
+        printf("%d ", results[i]);
+    }
+    printf("\n");
+    free(results);
+    return 0;
+}
+```
+
 ## PROBLEM:03
 ### TRANSFORM AN ARRAY BY PARITY
 
