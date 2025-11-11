@@ -72,6 +72,7 @@ int main(){
 ```c
 #include <stdio.h>
 #include <stdlib.h>
+
 int* transformArray(int* nums, int numsSize, int* returnSize){
     *returnSize = numsSize;
     int count=0;
