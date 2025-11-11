@@ -115,7 +115,37 @@ int main(){
 
     return 0;
 }
-```   
+```
+
+## PROBELM:04
+### CONVERT TEMPERATURE
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+double* convertTemperature(double celsius, int* returnSize ){
+    double* conversion = (double*) malloc(2*sizeof(double));
+    *returnSize = 2;
+    conversion[0] = celsius + 273.15;
+    conversion[1] = celsius * 1.80 + 32.00;
+
+    return conversion;
+}
+
+int main(){
+    double celsius = 36.50;
+    int returnSize;
+
+    double* conversion = convertTemperature(celsius, &returnSize);
+
+    for(int i = 0; i < 2; i++){
+        printf("%.2f ", conversion[i]);
+    }
+    free(conversion);
+    return 0;
+}
+```
 
 
 
